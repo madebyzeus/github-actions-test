@@ -1,9 +1,14 @@
 name: HTML Preview
 
-on: [push]
+# Run this workflow every time a new commit pushed to your repository
+on: push
 
 jobs:
-  html-preview
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  html-preview:
+    # Name the job
+    name: Previe HTML File
 
   steps:
     -name: html_preview
