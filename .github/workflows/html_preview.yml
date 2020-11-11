@@ -8,11 +8,11 @@ jobs:
   # when a job name is not provided
   html-preview:
     # Name the job
-    name: Previe HTML File
+    name: Preview HTML File
 
-  steps:
-    -name: html_preview
-    uses: pavi2410/html-preview-action@v2
-    with:
-      # The HTML file you want to preview, relative to the root of the repo
-      html_file: src/index.html
+    steps:
+      -name: html_preview
+      uses: pavi2410/html-preview-action@v2
+      with:
+        # The HTML file you want to preview, relative to the root of the repo
+        html_file: src/index.html
