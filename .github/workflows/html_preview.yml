@@ -3,17 +3,13 @@ name: HTML Preview
 # Run this workflow every time a new commit pushed to your repository
 on: 
   push:
-    branches: 
-      - main
+    branches: [ main ]
 
 jobs:
-  build:
-
+  test-html-file:
     runs-on: ubuntu-latest
-
     steps:
-    - name: HTML Preview
-      uses: pavi2410/html-preview-action@v2
-      with:
-      # The HTML file you want to preview, relative to the root of the repo
-        html_file: index.html
+      - uses: pavi2410/html-preview-action@v2
+        with:
+          # The HTML file you want to preview, relative to the root of the repo
+          html_file: index.html
