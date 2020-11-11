@@ -1,17 +1,14 @@
 name: HTML Preview
 
 # Run this workflow every time a new commit pushed to your repository
-on: push
+on: 
+  push:
+    branches: 
+      - main
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
-  html-preview:
-    # Name the job
-    name: Preview HTML File
-
-    steps:
-      uses: pavi2410/html-preview-action@v2
-      with:
-        # The HTML file you want to preview, relative to the root of the repo
-        html_file: index.html
+  - name: HTML Preview
+    uses: pavi2410/html-preview-action@v2
+    with:
+    # The HTML file you want to preview, relative to the root of the repo
+      html_file: src/index.html
